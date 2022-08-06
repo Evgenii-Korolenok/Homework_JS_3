@@ -20,3 +20,11 @@ while(c>=11) {
 
 /* 3. С помощью цикла найдите сумму чисел от 0 до 100. */
 
+let d = 100,
+    sum = 0;
+
+for(let i = 0; i <= d; i++) {
+    console.log(i);
+    sum +=i;
+}
+alert(sum);
