@@ -1,66 +1,62 @@
 /* 1. Выведите числа от 1 до 50 и от 35 до 8. */
 
-for(let a=1; a<=50; a++) {
-    console.log(a);
+for (let a = 1; a <= 50; a++) {
+  console.log(a);
 }
 
-for(let b=35; b>=8; b--) {
-    console.log(b);
+for (let b = 35; b >= 8; b--) {
+  console.log(b);
 }
-
 
 /* 2. Выведите столбец чисел от 89 до 11 - воспользуйтесь циклом while и отделите числа
 тегом <br /> друг от друга, чтобы получить столбец, а не строку. */
 
-let c=89;
-while(c>=11) {
-    document.write(c + '<br/>');
-    c--;
+let c = 89;
+while (c >= 11) {
+  document.write(c + "<br/>");
+  c--;
 }
 
 /* 3. С помощью цикла найдите сумму чисел от 0 до 100. */
 
 let d = 100,
-    sum1 = 0;
+  sum1 = 0;
 
-for(let i = 0; i <= d; i++) {
-    console.log(i);
-    sum1 +=i;
+for (let i = 0; i <= d; i++) {
+  console.log(i);
+  sum1 += i;
 }
 alert(sum1);
-
 
 /* 4. Найдите сумму чисел в каждом числе от 1 до 5, например: в числе 3 сумма составляет 6
 (1+2+3). */
 
 let e = 5;
 
-for (let f=0; f<=e; f++) {
-    sum = 1;
+for (let f = 0; f <= e; f++) {
+  sum = 1;
 
-    for(let g=1; g<=f; g++) {
-        sum += g;
-    }
-    
-    console.log(f + sum);
+  for (let g = 1; g <= f; g++) {
+    sum += g;
+  }
+
+  console.log(f + sum);
 }
-
 
 /* 5. Выведите чётные числа от 8 до 56. Решить задание через while и for. */
 
 let h = 8;
 
-while(h<=56) {
-    h++;
-    if (h%2 != 0) continue;
-    console.log (h);
+while (h <= 56) {
+  h++;
+  if (h % 2 != 0) continue;
+  console.log(h);
 }
 
-for(let h=8; h<=56; h++) {
-    if (h%2 != 0) continue;
-    console.log(h);
+for (let h = 8; h <= 56; h++) {
+  if (h % 2 != 0) continue;
+  console.log(h);
 }
-
 
 /* 6. Необходимо вывести на экран полную таблицу умножения (от 2 до 10) в виде:
 2*2 = 4
@@ -75,30 +71,28 @@ for(let h=8; h<=56; h++) {
 ...
 Для решения задачи используйте вложенные циклы. */
 
-let num1=0;
-    for(let i=2; i<=10; i++){
-        for(let j=2; j<=10; j++){
-            num1=j*i;
-            document.write(`${i} * ${j} = ${num1} </br>`);
-        }
-    }
-
+let num1 = 0;
+for (let i = 2; i <= 10; i++) {
+  for (let j = 2; j <= 10; j++) {
+    num1 = j * i;
+    document.write(`${i} * ${j} = ${num1} </br>`);
+  }
+}
 
 /* 7. Дано число n=1000. Делите его на 2 столько раз, пока результат деления не станет
 меньше 50. Какое число получится? Посчитайте количество итераций, необходимых
 для этого (итерация - это проход цикла), и запишите его в переменную num. */
 
 let num2 = 0,
-    counter = 0,
-    n = 1000;
-    while (n > 50) {
-        n /= 2;
-        num2 = 5;
-        counter++;
+  counter = 0,
+  n = 1000;
+while (n > 50) {
+  n /= 2;
+  num2 = 5;
+  counter++;
 }
-document.write(n + '<br />');
-document.write(counter + '<br />'); 
-
+document.write(n + "<br />");
+document.write(counter + "<br />");
 
 /* 8. Запустите цикл, в котором пользователю предлагается вводить число с клавиатуры, до
 тех пор, пока не будет введена пустая строка или 0. После выхода из цикла выведите
@@ -107,45 +101,43 @@ document.write(counter + '<br />');
 может ввести отрицательное значение. */
 
 let flag = true,
-    sum = 0,
-    counter1 = 0;
+  sum = 0,
+  counter1 = 0;
 
 while (flag) {
-    let a = prompt(`Введите число:`);
-    if ((+a) === 0 || a === " ") break;
-    if (isNaN(a)) {
-        alert ('Введено не число!'); 
-        continue;
-    }
-    sum =+ Number(a);
-    counter1++;
+  let a = prompt(`Введите число:`);
+  if (+a === 0 || a === " ") break;
+  if (isNaN(a)) {
+    alert("Введено не число!");
+    continue;
+  }
+  sum = +Number(a);
+  counter1++;
 }
 
-alert (`Среднее арифметическое: ${sum / counter1}` );
-
+alert(`Среднее арифметическое: ${sum / counter1}`);
 
 /* 9. Дана строка с числами разделенными пробелами «4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36
 8 57». Найдите самое большое и самое маленькое число в строке, используя цикл. */
 
-let str = '4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36 8 57',
-    max = -Infinity,
-    min = Infinity,
-    num = '';
+let str = "4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36 8 57",
+  max = -Infinity,
+  min = Infinity,
+  num = "";
 
 for (let k = 0; k < str.length; k++) {
-    if (str[k] != ' ') {
-        num += str[k];
-    } else {
-        console.log (num);
-        if (min > +num) min = +num;
-        if (max < +num) max = +num;
-        num = '';
-    }
+  if (str[k] != " ") {
+    num += str[k];
+  } else {
+    console.log(num);
+    if (min > +num) min = +num;
+    if (max < +num) max = +num;
+    num = "";
+  }
 }
 
-console.log (min);
-console.log (max);
-
+console.log(min);
+console.log(max);
 
 /* 10. Дано произвольное целое число n. Написать программу, которая:
 a. разбивает число n на цифры и выводит их на экран;
@@ -153,20 +145,20 @@ b. подсчитывает сколько цифр в числе n;
 c. находит сумму цифр числа n;
 d. меняет порядок цифр числа n на обратный. */
 
-let numb = +prompt ('Введите число:');
+let numb = +prompt("Введите число:");
 let summa = 0;
-    counter2 = 0;
-    rev = '';
+counter2 = 0;
+rev = "";
 
-numb += '';
+numb += "";
 
 for (let i = 0; i < numb.length; i++) {
-    summa += +numb[i];
-    counter2++;
-    rev = numb[i] + rev;
+  summa += +numb[i];
+  counter2++;
+  rev = numb[i] + rev;
 }
 
-alert (`Число: ${numb}
+alert(`Число: ${numb}
 Сумма: ${summa}
 Количество: ${counter2}
 Перевернутое число: ${rev}`);
