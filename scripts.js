@@ -146,11 +146,10 @@ c. находит сумму цифр числа n;
 d. меняет порядок цифр числа n на обратный. */
 
 let numb = +prompt("Введите число:");
-let summa = 0;
-counter2 = 0;
-rev = "";
-
-numb += "";
+let summa = 0,
+    counter2 = 0,
+    rev = "";
+    numb += "";
 
 for (let i = 0; i < numb.length; i++) {
   summa += +numb[i];
